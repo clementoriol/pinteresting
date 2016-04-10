@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
   validates :password, :on => :create,
                        :if => :password,
                        :format => {:with => /\A.*(?=.{10,})(?=.*\d)(?=.*[a-z])(?=.*[A=Z])(?=.*[\@\#\$\%\^\&\+\=]).*\Z/ }
+
+  has_many :pins
 end
