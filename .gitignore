@@ -21,3 +21,7 @@
 
 # MacOSX
 .DS_Store
+
+# Jetbrains
+/*.iml
+railways.cache
