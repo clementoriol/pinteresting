@@ -80,4 +80,14 @@ Rails.application.configure do
   # Required for Devise
   # TODO: update with the correct production URL
   config.action_mailer.default_url_options = { host: 'enigmatic-woodland-22608.herokuapp.com', port: 3000 }
+
+  # Upload to s3 on production
+  config.paperclip_defaults = {
+      :storage => :s3,
+      :s3_credentials => {
+          :bucket => ENV['S3_BUCKET_NAME'],
+          :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+          :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+      }
+  }
 end
