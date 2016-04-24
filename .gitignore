@@ -25,3 +25,6 @@
 # Jetbrains
 /*.iml
 railways.cache
+
+# public uploads
+public/system
